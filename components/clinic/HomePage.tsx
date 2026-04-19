@@ -48,65 +48,114 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="section-shell py-8 sm:py-16">
-      {/* Hero Bento Box */}
-      <section className="relative grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
-        
-        {/* Main CTA Panel */}
-        <div className="card-surface px-6 py-10 sm:px-14 sm:py-20 flex flex-col justify-center border-none bg-slate-50">
-          <div className="flex flex-wrap gap-2">
-            <span className="eyebrow bg-sky-100 text-sky-800">{t("clinicName")}</span>
-            <span className="eyebrow bg-emerald-100 text-emerald-800">English + Nepali</span>
-          </div>
-          <h1 className="mt-8 font-display text-4xl sm:text-5xl lg:text-[4rem] font-medium tracking-tight text-slate-900 leading-none">
-            {t("heroTitle")}
-          </h1>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
-            {t("heroDescription")}
-          </p>
-
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link href="/book" className="btn-primary flex-1 sm:flex-none text-center">
-              {t("bookAppointment")}
-            </Link>
-            <a href={`tel:${CLINIC_CONTACT.phone}`} className="btn-secondary">
-              {t("callNow")}
-            </a>
-          </div>
-        </div>
-
-        {/* Floating Side Panels */}
-        <div className="grid gap-6">
-          <div className="card-panel px-8 py-10 flex flex-col justify-between">
-            <div>
-              <p className="text-sm font-semibold tracking-wider text-teal-200 uppercase">Featured Service</p>
-              <h2 className="mt-3 font-display text-3xl font-medium text-white">{t(featuredImage.titleKey)}</h2>
-              <p className="mt-3 text-teal-100 leading-relaxed text-sm">
-                {t(featuredImage.descriptionKey)}
-              </p>
+    <div className="section-shell py-8 sm:py-12">
+      <section className="relative overflow-hidden rounded-[38px] border border-[color:var(--border)] bg-white/92 px-6 py-10 shadow-[var(--shadow-soft)] sm:px-10 sm:py-14">
+        <div className="hero-glow left-[-8rem] top-[-8rem] bg-teal-200" />
+        <div className="hero-glow right-[-6rem] top-[-4rem] bg-sky-200" />
+        <div className="relative grid gap-10 xl:grid-cols-[1.08fr_0.92fr] xl:items-center">
+          <div>
+            <div className="flex flex-wrap gap-2">
+              <span className="eyebrow">{t("clinicName")}</span>
+              <span className="eyebrow">English + Nepali</span>
             </div>
-            
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              {SERVICES.slice(0, 4).map((service) => (
-                <div key={service.id} className="rounded-2xl bg-white/10 px-4 py-4 backdrop-blur-sm border border-white/10">
-                  <p className="text-sm font-medium text-white">{t(service.key)}</p>
+            <h1 className="mt-6 max-w-3xl font-display text-5xl leading-tight text-slate-950 sm:text-6xl">
+              {t("heroTitle")}
+            </h1>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
+              {t("heroDescription")}
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/book" className="btn-primary">
+                {t("bookAppointment")}
+              </Link>
+              <a href={`tel:${CLINIC_CONTACT.phone}`} className="btn-secondary">
+                {t("callNow")}
+              </a>
+              <a
+                href={`https://wa.me/${CLINIC_CONTACT.whatsapp}`}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-secondary"
+              >
+                {t("whatsApp")}
+              </a>
+            </div>
+
+            <div className="mt-8 grid gap-3 sm:grid-cols-3">
+              {highlights.map((highlight) => (
+                <div key={highlight.label} className="surface-muted px-4 py-4">
+                  <p className="text-xs uppercase tracking-[0.22em] text-slate-500">
+                    {highlight.label}
+                  </p>
+                  <p className="mt-2 font-display text-3xl">{highlight.value}</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{highlight.note}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2">
-            {highlights.slice(0, 2).map((highlight) => (
-              <div key={highlight.label} className="card-surface px-6 py-6 border-none bg-slate-50 flex flex-col justify-center items-center text-center">
-                <p className="text-xs font-bold uppercase tracking-widest text-slate-400">
-                  {highlight.label}
-                </p>
-                <p className="mt-3 font-display text-4xl font-medium text-sky-600">{highlight.value}</p>
+          <div className="grid gap-4">
+            <div className="card-surface overflow-hidden">
+              <img
+                src={featuredImage.src}
+                alt={t(featuredImage.titleKey)}
+                className="h-72 w-full object-cover sm:h-80"
+              />
+              <div className="grid gap-4 px-5 py-5">
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.22em] text-slate-500">
+                      Front desk ready
+                    </p>
+                    <p className="mt-2 font-display text-3xl">{t(featuredImage.titleKey)}</p>
+                    <p className="mt-2 text-sm leading-7 text-slate-600">
+                      {t(featuredImage.descriptionKey)}
+                    </p>
+                  </div>
+
+                  <div className="surface-muted min-w-[11rem] px-4 py-4">
+                    <p className="text-xs uppercase tracking-[0.22em] text-slate-500">Today</p>
+                    <p className="mt-2 text-sm font-semibold text-slate-900">
+                      Online + walk-in queue
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">
+                      One system for booking, payment, follow-up, and reports.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {SERVICES.slice(0, 4).map((service) => (
+                    <div key={service.id} className="surface-muted px-4 py-4">
+                      <div className="flex items-center justify-between gap-3">
+                        <p className="text-sm font-semibold text-slate-900">{t(service.key)}</p>
+                        <span className="chip status-blue">{formatCurrency(service.price)}</span>
+                      </div>
+                      <p className="mt-2 text-xs leading-6 text-slate-500">
+                        {t(service.descriptionKey)}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            ))}
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {previewImages.map((image) => (
+                <div key={image.src} className="card-surface overflow-hidden">
+                  <img src={image.src} alt={t(image.titleKey)} className="h-40 w-full object-cover" />
+                  <div className="px-4 py-4">
+                    <p className="font-display text-2xl">{t(image.titleKey)}</p>
+                    <p className="mt-2 text-sm leading-7 text-slate-600">
+                      {t(image.descriptionKey)}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-
       </section>
 
       <section className="mt-8">
@@ -180,12 +229,12 @@ export default function HomePage() {
             {GALLERY_IMAGES.map((image) => (
               <div
                 key={image.titleKey}
-                className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm"
+                className="overflow-hidden rounded-[28px] border border-[color:var(--border)] bg-slate-50"
               >
-                <img src={image.src} alt={t(image.titleKey)} className="h-40 w-full object-cover" />
-                <div className="px-5 py-5">
-                  <p className="font-semibold text-zinc-900">{t(image.titleKey)}</p>
-                  <p className="mt-2 text-sm leading-6 text-zinc-600">
+                <img src={image.src} alt={t(image.titleKey)} className="h-36 w-full object-cover" />
+                <div className="px-4 py-4">
+                  <p className="font-semibold text-slate-900">{t(image.titleKey)}</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
                     {t(image.descriptionKey)}
                   </p>
                 </div>

@@ -22,9 +22,7 @@ export default function DashboardSidebar() {
   };
 
   return (
-    <div className="p-4 lg:min-h-screen lg:py-6 lg:pl-6 lg:sticky lg:top-0 z-20">
-      <aside className="card-panel h-auto lg:h-[calc(100vh-3rem)] px-6 py-8 flex flex-col justify-between gap-8">
-        <div>
+    <aside className="card-panel h-full min-h-screen px-4 py-6 lg:sticky lg:top-0">
       <div className="flex items-center gap-3 px-2">
         <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-lg font-bold">
           S
@@ -35,7 +33,7 @@ export default function DashboardSidebar() {
         </div>
       </div>
 
-      <div className="mt-8 hidden lg:block rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200">
+      <div className="mt-8 rounded-[24px] border border-white/10 bg-white/5 p-4 text-sm text-slate-200">
         <p className="font-semibold">{profile?.name || user?.displayName || "Clinic user"}</p>
         <p className="mt-1 text-xs text-slate-300">{user?.email || "Awaiting sign-in state"}</p>
         <p className="mt-3 text-[11px] uppercase tracking-[0.2em] text-slate-400">Role</p>
@@ -46,14 +44,14 @@ export default function DashboardSidebar() {
         </p>
       </div>
 
-      <nav className="mt-6 flex overflow-x-auto whitespace-nowrap lg:grid lg:mt-8 gap-2 rounded-xl border border-white/10 bg-white/5 p-2 px-3 lg:px-2 scrollbar-hide">
+      <nav className="mt-8 grid gap-2 rounded-[24px] border border-white/10 bg-white/5 p-2">
         {DASHBOARD_LINKS.map((link) => {
           const active = pathname.startsWith(link.href);
           return (
             <Link
               key={link.href}
               href={link.href}
-              className={`rounded-lg px-4 py-3 text-sm font-semibold transition-colors ${
+              className={`rounded-2xl px-4 py-3 text-sm font-semibold ${
                 active
                   ? "bg-white text-slate-950 shadow-sm"
                   : "text-slate-100 hover:bg-white/10"
@@ -65,20 +63,18 @@ export default function DashboardSidebar() {
         })}
       </nav>
 
-      <div className="mt-8 hidden lg:block rounded-xl border border-white/10 bg-white/5 p-4 text-sm leading-7 text-slate-300">
+      <div className="mt-8 rounded-[24px] border border-white/10 bg-white/5 p-4 text-sm leading-7 text-slate-300">
         Patient bookings, walk-ins, payments, and follow-ups all share the same appointments collection.
       </div>
-      </div>
 
-        <div className="mt-6 lg:mt-8 flex flex-row lg:flex-col gap-4">
-          <Link href="/" className="btn-secondary w-full bg-white text-teal-900 border-none hover:bg-teal-50">
-            Back to site
-          </Link>
-          <button type="button" className="btn-secondary w-full bg-teal-900 text-white border-teal-800 hover:bg-teal-800 hover:border-teal-700" onClick={() => void handleLogout()}>
-            Sign Out
-          </button>
-        </div>
-      </aside>
-    </div>
+      <div className="mt-8 grid gap-3">
+        <Link href="/" className="btn-secondary w-full">
+          Back to site
+        </Link>
+        <button type="button" className="btn-secondary w-full" onClick={() => void handleLogout()}>
+          Sign Out
+        </button>
+      </div>
+    </aside>
   );
 }
