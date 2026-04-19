@@ -53,15 +53,15 @@ export default function HomePage() {
       <section className="relative grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
         
         {/* Main CTA Panel */}
-        <div className="card-surface px-8 py-12 sm:px-14 sm:py-20 flex flex-col justify-center border-none bg-slate-50">
+        <div className="card-surface px-6 py-10 sm:px-14 sm:py-20 flex flex-col justify-center border-none bg-slate-50">
           <div className="flex flex-wrap gap-2">
             <span className="eyebrow bg-sky-100 text-sky-800">{t("clinicName")}</span>
             <span className="eyebrow bg-emerald-100 text-emerald-800">English + Nepali</span>
           </div>
-          <h1 className="mt-8 font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-[4rem] leading-none">
+          <h1 className="mt-8 font-display text-4xl sm:text-5xl lg:text-[4rem] font-medium tracking-tight text-slate-900 leading-none">
             {t("heroTitle")}
           </h1>
-          <p className="mt-6 max-w-2xl text-[17px] leading-relaxed text-slate-600 sm:text-lg">
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
             {t("heroDescription")}
           </p>
 
