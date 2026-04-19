@@ -1,0 +1,49 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Function to get the current user's profile document
+    function getUserData() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+
+    // Function to check if the user forms part of staff
+    function isStaff() {
+      return request.auth != null && (
+        getUserData().role == 'admin' || 
+        getUserData().role == 'reception' || 
+        getUserData().role == 'owner'
+      );
+    }
+
+    // Rules for 'users' collection
+    match /users/{userId} {
+      // Anyone authenticated can create their profile (if they don't have one).
+      // They can only set their role to 'user'.
+      allow create: if request.auth != null && request.auth.uid == userId 
+                    && request.resource.data.role == 'user';
+      
+      // Users can read/update their own profiles
+      allow read, update: if request.auth != null && request.auth.uid == userId;
+
+      // Staff can read all user profiles
+      allow read: if isStaff();
+      
+      // Only admins/owners can update other people's roles
+      allow update: if request.auth != null && (getUserData().role == 'admin' || getUserData().role == 'owner');
+    }
+
+    // Rules for 'appointments' collection
+    match /appointments/{appId} {
+      // Staff can do anything
+      allow read, write: if isStaff();
+      
+      // Users can read and update their own appointments
+      allow read, update: if request.auth != null && resource.data.bookedByUid == request.auth.uid;
+      
+      // Anyone can create an appointment (guest users included)
+      // Though, authenticated users are tied to 'bookedByUid'
+      allow create: if true;
+    }
+  }
+}

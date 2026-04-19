@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Security Warning Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="app-card">
+            <div class="brand-row">
+                <div class="brand-badge">FS</div>
+                <div>
+                    <p class="eyebrow">Fintech Secure</p>
+                    <h1>OTP Verification</h1>
+                </div>
+            </div>
+
+            <p class="intro">
+                Demo of a context-aware OTP security warning system that reacts to suspicious login conditions.
+            </p>
+
+            <div class="scenario-row">
+                <button class="scenario-btn" data-scenario="normal">Normal Scenario</button>
+                <button class="scenario-btn" data-scenario="suspicious">Suspicious Scenario</button>
+                <button class="scenario-btn" data-scenario="high-risk">High Risk Scam</button>
+            </div>
+
+            <form id="otp-form" class="otp-form">
+                <label class="field-label" for="username">Username</label>
+                <input id="username" name="username" type="text" placeholder="Enter your username" required>
+
+                <div class="context-panel">
+                    <h2>Simulated Context Inputs</h2>
+                    <div class="toggle-grid">
+                        <label class="toggle-card">
+                            <span>New Device?</span>
+                            <select id="new_device" name="new_device">
+                                <option value="false">No</option>
+                                <option value="true">Yes</option>
+                            </select>
+                        </label>
+                        <label class="toggle-card">
+                            <span>Unusual Location?</span>
+                            <select id="unusual_location" name="unusual_location">
+                                <option value="false">No</option>
+                                <option value="true">Yes</option>
+                            </select>
+                        </label>
+                        <label class="toggle-card">
+                            <span>Multiple OTP Requests?</span>
+                            <select id="multiple_requests" name="multiple_requests">
+                                <option value="false">No</option>
+                                <option value="true">Yes</option>
+                            </select>
+                        </label>
+                        <label class="toggle-card">
+                            <span>Suspicious Message?</span>
+                            <select id="suspicious_message" name="suspicious_message">
+                                <option value="false">No</option>
+                                <option value="true">Yes</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+                <button id="request-otp-btn" class="primary-btn" type="button">Request OTP</button>
+
+                <section id="otp-section" class="otp-section hidden">
+                    <div id="warning-box" class="warning-box warning-green">
+                        <div class="warning-top">
+                            <span class="status-pill" id="risk-level">LOW</span>
+                            <span class="risk-score">Risk Score: <strong id="risk-score">0</strong>/100</span>
+                        </div>
+                        <p id="warning-message" class="warning-message">Proceed normally. This seems safe.</p>
+
+                        <div class="reason-block">
+                            <p class="reason-title">Risk detected because:</p>
+                            <ul id="reason-list">
+                                <li>No suspicious signals were detected.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <label class="field-label" for="otp">Enter OTP</label>
+                    <input id="otp" name="otp" type="text" inputmode="numeric" maxlength="6" placeholder="6-digit code">
+                    <button class="secondary-btn" type="submit">Verify OTP</button>
+                </section>
+            </form>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

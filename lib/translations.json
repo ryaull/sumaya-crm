@@ -1,0 +1,358 @@
+{
+  "clinicName": {
+    "en": "Sumaya Health Centre",
+    "np": "सुमाया हेल्थ सेन्टर"
+  },
+  "clinicTagline": {
+    "en": "Compassionate care, simple booking, one clear clinic desk.",
+    "np": "मायालु सेवा, सजिलो बुकिङ, एकै ठाउँबाट स्पष्ट क्लिनिक व्यवस्थापन।"
+  },
+  "navHome": {
+    "en": "Home",
+    "np": "होम"
+  },
+  "navBook": {
+    "en": "Book Appointment",
+    "np": "अपोइन्टमेन्ट बुक गर्नुहोस्"
+  },
+  "navHistory": {
+    "en": "Patient History",
+    "np": "बिरामी इतिहास"
+  },
+  "hospitalHistory": {
+    "en": "Hospital History",
+    "np": "अस्पताल इतिहास"
+  },
+  "navDashboard": {
+    "en": "Dashboard",
+    "np": "ड्यासबोर्ड"
+  },
+  "heroTitle": {
+    "en": "Modern clinic management for patients and front desk teams.",
+    "np": "बिरामी र फ्रन्ट डेस्क टोलीका लागि आधुनिक क्लिनिक व्यवस्थापन।"
+  },
+  "heroDescription": {
+    "en": "Book visits online, manage walk-ins, track payments, and review reports from one calm workspace.",
+    "np": "अनलाइन बुकिङ, वाक-इन व्यवस्थापन, भुक्तानी ट्र्याक, र रिपोर्ट हेर्ने काम एकै शान्त प्रणालीबाट गर्नुहोस्।"
+  },
+  "bookAppointment": {
+    "en": "Book Appointment",
+    "np": "अपोइन्टमेन्ट बुक गर्नुहोस्"
+  },
+  "callNow": {
+    "en": "Call Now",
+    "np": "अहिले फोन गर्नुहोस्"
+  },
+  "whatsApp": {
+    "en": "WhatsApp",
+    "np": "ह्वाट्सएप"
+  },
+  "servicesTitle": {
+    "en": "Services at a glance",
+    "np": "उपलब्ध सेवाहरू"
+  },
+  "galleryTitle": {
+    "en": "Inside the clinic",
+    "np": "क्लिनिक भित्रको दृश्य"
+  },
+  "gallerySubtitle": {
+    "en": "Local assets from /public/images for a quick working demo.",
+    "np": "/public/images भित्रका स्थानीय फाइलहरू प्रयोग गरिएको डेमो।"
+  },
+  "bookingTitle": {
+    "en": "Appointment booking",
+    "np": "अपोइन्टमेन्ट बुकिङ"
+  },
+  "bookingDescription": {
+    "en": "Choose a service, pick an available slot, and send the request directly to the clinic queue.",
+    "np": "सेवा छान्नुहोस्, उपलब्ध समय रोज्नुहोस्, र अनुरोधलाई सिधै क्लिनिकको सूचीमा पठाउनुहोस्।"
+  },
+  "name": {
+    "en": "Name",
+    "np": "नाम"
+  },
+  "phone": {
+    "en": "Phone",
+    "np": "फोन"
+  },
+  "service": {
+    "en": "Service",
+    "np": "सेवा"
+  },
+  "date": {
+    "en": "Date",
+    "np": "मिति"
+  },
+  "timeSlot": {
+    "en": "Time Slot",
+    "np": "समय"
+  },
+  "status": {
+    "en": "Status",
+    "np": "स्थिति"
+  },
+  "payment": {
+    "en": "Payment",
+    "np": "भुक्तानी"
+  },
+  "paymentMode": {
+    "en": "Payment Mode",
+    "np": "भुक्तानी माध्यम"
+  },
+  "source": {
+    "en": "Source",
+    "np": "स्रोत"
+  },
+  "submitBooking": {
+    "en": "Submit Booking",
+    "np": "बुकिङ पठाउनुहोस्"
+  },
+  "searchPatients": {
+    "en": "Search patient history",
+    "np": "बिरामी इतिहास खोज्नुहोस्"
+  },
+  "searchPlaceholder": {
+    "en": "Search by exact name or phone",
+    "np": "ठ्याक्कै नाम वा फोनबाट खोज्नुहोस्"
+  },
+  "pastVisits": {
+    "en": "Past visits",
+    "np": "अघिल्ला भ्रमणहरू"
+  },
+  "upcomingAppointments": {
+    "en": "Upcoming appointments",
+    "np": "आगामी अपोइन्टमेन्ट"
+  },
+  "appointments": {
+    "en": "Appointments",
+    "np": "अपोइन्टमेन्टहरू"
+  },
+  "todaysPatients": {
+    "en": "Today's Patients",
+    "np": "आजका बिरामी"
+  },
+  "followUps": {
+    "en": "Follow-ups",
+    "np": "फलो-अप"
+  },
+  "reports": {
+    "en": "Reports",
+    "np": "रिपोर्ट"
+  },
+  "addWalkIn": {
+    "en": "Add Walk-in",
+    "np": "वाक-इन थप्नुहोस्"
+  },
+  "settings": {
+    "en": "Settings",
+    "np": "सेटिङ्स"
+  },
+  "adminLogin": {
+    "en": "Admin Login",
+    "np": "एडमिन लगइन"
+  },
+  "signInGoogle": {
+    "en": "Sign in with Google",
+    "np": "गुगलबाट लगइन गर्नुहोस्"
+  },
+  "pending": {
+    "en": "Pending",
+    "np": "पेन्डिङ"
+  },
+  "confirmed": {
+    "en": "Confirmed",
+    "np": "कन्फर्म"
+  },
+  "completed": {
+    "en": "Completed",
+    "np": "सम्पन्न"
+  },
+  "halfPaid": {
+    "en": "Half Paid",
+    "np": "आधा भुक्तानी"
+  },
+  "paid": {
+    "en": "Paid",
+    "np": "भुक्तानी भएको"
+  },
+  "cash": {
+    "en": "Cash",
+    "np": "नगद"
+  },
+  "online": {
+    "en": "Online",
+    "np": "अनलाइन"
+  },
+  "walkIn": {
+    "en": "Walk-in",
+    "np": "वाक-इन"
+  },
+  "serviceOpd": {
+    "en": "OPD",
+    "np": "ओपिडी"
+  },
+  "serviceEcg": {
+    "en": "ECG",
+    "np": "इसीजी"
+  },
+  "serviceUltrasound": {
+    "en": "Ultrasound",
+    "np": "अल्ट्रासाउन्ड"
+  },
+  "serviceEcho": {
+    "en": "Echo",
+    "np": "इको"
+  },
+  "servicePathology": {
+    "en": "Pathology",
+    "np": "प्याथोलोजी"
+  },
+  "servicePharmacy": {
+    "en": "Pharmacy",
+    "np": "फार्मेसी"
+  },
+  "serviceDressing": {
+    "en": "Dressing",
+    "np": "ड्रेसिङ"
+  },
+  "serviceOpdDesc": {
+    "en": "General consultation and first assessment.",
+    "np": "सामान्य परामर्श र प्रारम्भिक मूल्याङ्कन।"
+  },
+  "serviceEcgDesc": {
+    "en": "Heart rhythm checks with quick front desk confirmation.",
+    "np": "हृदयको चाल जाँच गर्ने सेवा।"
+  },
+  "serviceUltrasoundDesc": {
+    "en": "Scheduled imaging with non-overlapping slots.",
+    "np": "समय तालिकाअनुसार गरिने इमेजिङ सेवा।"
+  },
+  "serviceEchoDesc": {
+    "en": "Cardiac echo appointments with follow-up support.",
+    "np": "इको जाँच र फलो-अप सहयोग।"
+  },
+  "servicePathologyDesc": {
+    "en": "Routine pathology workflows and result-ready visits.",
+    "np": "रुटिन ल्याब र प्याथोलोजी सेवा।"
+  },
+  "servicePharmacyDesc": {
+    "en": "Counter medicine support linked to visits.",
+    "np": "भ्रमणसँग जोडिएको औषधि सहायता।"
+  },
+  "serviceDressingDesc": {
+    "en": "Daily wound care and dressing support.",
+    "np": "दैनिक घाउ हेरचाह र ड्रेसिङ सेवा।"
+  },
+  "confirm": {
+    "en": "Confirm",
+    "np": "कन्फर्म"
+  },
+  "complete": {
+    "en": "Complete",
+    "np": "सम्पन्न गर्नुहोस्"
+  },
+  "reschedule": {
+    "en": "Reschedule",
+    "np": "पुनः तालिका"
+  },
+  "addFollowUp": {
+    "en": "Add Follow-up",
+    "np": "फलो-अप थप्नुहोस्"
+  },
+  "markAsPaid": {
+    "en": "Mark as Paid",
+    "np": "भुक्तानी भएको मान्नुहोस्"
+  },
+  "updateStatus": {
+    "en": "Update Status",
+    "np": "स्थिति अपडेट"
+  },
+  "confirmAppointment": {
+    "en": "Confirm Appointment",
+    "np": "अपोइन्टमेन्ट कन्फर्म"
+  },
+  "rescheduleMessage": {
+    "en": "Reschedule Message",
+    "np": "रिस्केड्युल सन्देश"
+  },
+  "followUpMessage": {
+    "en": "Follow-up Message",
+    "np": "फलो-अप सन्देश"
+  },
+  "totalPatientsToday": {
+    "en": "Total Patients Today",
+    "np": "आजका कुल बिरामी"
+  },
+  "totalRevenueToday": {
+    "en": "Total Revenue Today",
+    "np": "आजको कुल आम्दानी"
+  },
+  "pendingPayments": {
+    "en": "Pending Payments",
+    "np": "बाँकी भुक्तानी"
+  },
+  "revenueOverTime": {
+    "en": "Revenue over time",
+    "np": "समयअनुसार आम्दानी"
+  },
+  "serviceDistribution": {
+    "en": "Service distribution",
+    "np": "सेवा वितरण"
+  },
+  "paymentStatusChart": {
+    "en": "Payment status",
+    "np": "भुक्तानी स्थिति"
+  },
+  "receptionDesk": {
+    "en": "Reception",
+    "np": "रिसेप्सन"
+  },
+  "clinicInterior": {
+    "en": "Clinic interior",
+    "np": "क्लिनिक भित्री भाग"
+  },
+  "equipmentZone": {
+    "en": "Equipment area",
+    "np": "उपकरण क्षेत्र"
+  },
+  "galleryReceptionDesc": {
+    "en": "A calm desk for reception, billing, and visit coordination.",
+    "np": "रिसेप्सन, बिलिङ, र समन्वयका लागि शान्त डेस्क।"
+  },
+  "galleryInteriorDesc": {
+    "en": "Clean consultation rooms prepared for OPD and scans.",
+    "np": "ओपिडी र स्क्यानका लागि तयार गरिएको स्वच्छ कोठा।"
+  },
+  "galleryEquipmentDesc": {
+    "en": "Diagnostic equipment arranged for ECG and imaging workflows.",
+    "np": "इसीजी र इमेजिङ सेवाका लागि मिलाइएको उपकरण क्षेत्र।"
+  },
+  "noMatches": {
+    "en": "No matching patients found yet.",
+    "np": "अहिलेसम्म मिल्दो बिरामी भेटिएन।"
+  },
+  "availableSlots": {
+    "en": "Available slots",
+    "np": "उपलब्ध समय"
+  },
+  "booked": {
+    "en": "Booked",
+    "np": "बुक भइसकेको"
+  },
+  "available": {
+    "en": "Available",
+    "np": "उपलब्ध"
+  },
+  "loading": {
+    "en": "Loading",
+    "np": "लोड हुँदैछ"
+  },
+  "demoModeNotice": {
+    "en": "If Firestore is unavailable, the app falls back to local demo storage so the interface remains usable.",
+    "np": "यदि फायरस्टोर उपलब्ध छैन भने डेमोका लागि स्थानीय स्टोरेज प्रयोग हुन्छ।"
+  },
+  "settingsDescription": {
+    "en": "Review clinic configuration, Firebase project wiring, and the current language preference.",
+    "np": "क्लिनिक कन्फिगरेसन, फायरबेस जडान, र भाषा रोजाइ हेर्नुहोस्।"
+  }
+}
